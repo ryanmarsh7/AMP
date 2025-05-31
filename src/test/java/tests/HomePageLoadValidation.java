@@ -1,6 +1,7 @@
 package tests;
 import base.BaseTest;
 import org.testng.annotations.Test;
+import org.testng.Assert;
 
 
 public class HomePageLoadValidation extends BaseTest {
@@ -8,6 +9,9 @@ public class HomePageLoadValidation extends BaseTest {
 
     @Test
     public void testHomeLaunch() {
+
+        driver.get("https://www.agamarsh.co.uk/");
+        Assert.assertEquals(driver.getTitle(), "Agnieszka Marsh Photography - Agnieszka Marsh");
 
         String Title = driver.getTitle();
         System.out.println(Title);
