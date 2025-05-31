@@ -22,6 +22,7 @@ public class HomePageLoadValidation extends BaseTest {
     {
         System.out.println("Test Failed: Home page not displayed");
     }
+
 }
 
 }
