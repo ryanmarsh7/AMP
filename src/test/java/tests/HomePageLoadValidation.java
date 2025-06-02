@@ -11,7 +11,7 @@ public class HomePageLoadValidation extends BaseTest {
     public void testHomeLaunch() {
 
         driver.get("https://www.agamarsh.co.uk/");
-        Assert.assertEquals(driver.getTitle(), "Agnieszka Marsh Photography - Agnieszka Marsh");
+        Assert.assertEquals(driver.getTitle(), "Agnieszka Marsh Photography - Agnieszka Mars");
 
         String Title = driver.getTitle();
         System.out.println(Title);

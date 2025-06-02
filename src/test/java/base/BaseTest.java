@@ -9,7 +9,7 @@ import tests.DriverFactory;
 import tests.ConfigReader;
 
 public class BaseTest {
-    protected WebDriver driver;
+    public WebDriver driver;
 
 
     @BeforeMethod
