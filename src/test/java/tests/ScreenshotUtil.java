@@ -34,4 +34,27 @@ public class ScreenshotUtil {
             System.out.println("❌ Failed to save screenshot: " + e.getMessage());
         }
     }
+
+    public static String captureAndReturnPath(WebDriver driver, String testName) {
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File src = ts.getScreenshotAs(OutputType.FILE);
+
+        File screenshotDir = new File("screenshots");
+        if (!screenshotDir.exists()) {
+            screenshotDir.mkdirs();
+        }
+
+        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String fileName = "screenshots/" + testName + "_" + timestamp + ".png";
+        File dest = new File(fileName);
+
+        try {
+            FileUtils.copyFile(src, dest);
+            return dest.getAbsolutePath(); // Needed by ExtentReports
+        } catch (IOException e) {
+            System.out.println("❌ Could not save screenshot: " + e.getMessage());
+            return null;
+        }
+    }
+
 }
