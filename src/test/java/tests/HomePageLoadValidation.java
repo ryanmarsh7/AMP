@@ -32,6 +32,7 @@ public class HomePageLoadValidation extends BaseTest {
 
     @Test
     public void validateContactFormSubmission() {
+        System.out.println("Executing Contact Form scenarios");
         ContactUsPage contactPage = new ContactUsPage(driver);
         contactPage.goTo();
         contactPage.enterName("Xander Marsh");
@@ -42,6 +43,8 @@ public class HomePageLoadValidation extends BaseTest {
         contactPage.submitForm();
 
         Assert.assertTrue(contactPage.isSubmissionSuccessful(), "Contact form submission failed.");
+
+        System.out.println("contact form scenario executed as expected");
     }
 
 }
