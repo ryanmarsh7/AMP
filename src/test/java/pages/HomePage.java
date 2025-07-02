@@ -14,7 +14,7 @@ public class HomePage {
     // ======== Locators with Justification ========
 
     // Logo at the top left – unique class and always visible on page load.
-    private By siteLogo = By.cssSelector("a.custom-logo-link img");
+    private By siteLogo = By.xpath("//*[@id=\"masthead\"]");
 
     // Hero image or banner – visually identifies the page and is consistently present.
     private By heroImage = By.cssSelector("section.elementor-section img");

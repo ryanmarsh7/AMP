@@ -2,14 +2,14 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.ContactUsPage;
+import pages.ContactPage;
 import base.BaseTest;
 
 public class ContactUsTest extends BaseTest {
 
     @Test
     public void validateContactFormSubmission() {
-        ContactUsPage contactPage = new ContactUsPage(driver);
+        ContactPage contactPage = new ContactPage(driver);
         contactPage.goTo();
         contactPage.enterName("Xander Marsh");
         contactPage.enterEmail("Xaxa@test.com");

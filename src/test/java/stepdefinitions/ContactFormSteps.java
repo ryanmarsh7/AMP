@@ -3,13 +3,13 @@ package stepdefinitions;
 import io.cucumber.java.en.*;
 import org.testng.Assert;
 import org.openqa.selenium.WebDriver;
-import pages.ContactUsPage;
+import pages.ContactPage;
 import tests.DriverFactory;
 
 public class ContactFormSteps {
 
     WebDriver driver = DriverFactory.createDriver();
-    ContactUsPage contactPage = new ContactUsPage(driver);
+    ContactPage contactPage = new ContactPage(driver);
 
     @Given("I am on the Contact Us page")
     public void i_am_on_the_contact_us_page() {

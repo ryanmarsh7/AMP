@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.time.Duration;
 
-public class ContactUsPage {
+public class ContactPage {
     private WebDriver driver;
     private WebDriverWait wait;
 
@@ -21,7 +21,7 @@ public class ContactUsPage {
     // Optional: Wait for a success confirmation after form submission
     private By successMessage = By.cssSelector(".gform_confirmation_message");
 
-    public ContactUsPage(WebDriver driver) {
+    public ContactPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }

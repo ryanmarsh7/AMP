@@ -1,6 +1,6 @@
 @ContactForm
 Feature: Contact Us Form
-    @contactPage
+    @contactPage @smoke
   Scenario: Submitting the Contact Us form with valid inputs
     Given I am on the Contact Us page
     When I enter "John Doe" into the name field

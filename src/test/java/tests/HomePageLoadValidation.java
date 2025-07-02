@@ -2,7 +2,7 @@ package tests;
 import base.BaseTest;
 import org.testng.annotations.Test;
 import org.testng.Assert;
-import pages.ContactUsPage;
+import pages.ContactPage;
 
 
 public class HomePageLoadValidation extends BaseTest {
@@ -33,7 +33,7 @@ public class HomePageLoadValidation extends BaseTest {
     @Test
     public void validateContactFormSubmission() {
         System.out.println("Executing Contact Form scenarios");
-        ContactUsPage contactPage = new ContactUsPage(driver);
+        ContactPage contactPage = new ContactPage(driver);
         contactPage.goTo();
         contactPage.enterName("Xander Marsh");
         contactPage.enterEmail("Xaxa@test.com");
