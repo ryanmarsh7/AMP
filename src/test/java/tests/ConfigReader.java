@@ -7,7 +7,7 @@ public class ConfigReader {
     }
 
     public static boolean isHeadless() {
-        return Boolean.parseBoolean(System.getProperty("headless", "false"));
+        return Boolean.parseBoolean(System.getProperty("headless", "true"));
     }
 
 //    public static String getEnvironment() {
